@@ -1,0 +1,8 @@
+2025-01-23 02:07:22 [    INFO] PASS (Selenium_script.py:ui_click:42)
+2025-01-23 02:07:22 [    INFO] PASS (Selenium_script.py:ui_input:49)
+2025-01-23 02:07:22 [    INFO] PASS (Selenium_script.py:ui_input:49)
+2025-01-23 02:07:22 [    INFO] PASS (Selenium_script.py:ui_input:49)
+2025-01-23 02:07:22 [    INFO] PASS (Selenium_script.py:ui_input:49)
+2025-01-23 02:07:22 [    INFO] PASS (Selenium_script.py:ui_click:42)
+2025-01-23 02:07:22 [    INFO] PASS (Selenium_script.py:ui_result:55)
+2025-01-23 02:07:22 [    INFO] FAIL (Selenium_script.py:test_insert_valid:77)
