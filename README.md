@@ -3,6 +3,8 @@
 - event.py : function_name, method, url 정보 관리 위치 검토 필요
 - postman, selenium, excel_read 통합 관리
   - readme 파일 정리 필요 (재작성 등)
+- Selenium_script.py 파일 분리
+  - 기본 Script (파라미터로 단일 Case를 처리하는 Script)와 실제 Test를 구동하는 Script 분리)
 
 version : 0.6, date : 2025-01-21
 - console log 추가 code 작성
