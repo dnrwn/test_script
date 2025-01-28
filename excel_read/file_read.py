@@ -3,7 +3,7 @@ import openpyxl,tkinter.filedialog, os, json, datetime, logging
 test_time = datetime.datetime.now().strftime('%y%m%d_%H%M%S')
 
 def console_logger():
-    logging.basicConfig(filename=f'log/{test_time}.log/', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+    logging.basicConfig(filename=f'excel_read/log/{test_time}.log/', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
     return logging.getLogger()
 
 # file_read, sheet_read 함수 정리할 필요가 있을지 검토
@@ -12,8 +12,8 @@ def file_read(a='1'):
     console_logger().debug(file_read.__name__)
     # a = input('1 : 자동 실행, 2 : 직접 선택\n')
     if a == '1':  # 동일 디렉토리에 있는 xlsx 파일 중 첫 번째 파일 선택
-        file = os.listdir(os.getcwd())
-        return openpyxl.load_workbook([s for s in file if '.xlsx' in s][0])
+        file = os.listdir(os.getcwd()+'\\excel_read')
+        return openpyxl.load_workbook(os.getcwd()+'\\excel_read\\'+[s for s in file if '.xlsx' in s][0])
     elif a == '2':  # 탐색기로 파일 선택
         ################## TBD ##################
         return openpyxl.load_workbook(tkinter.filedialog.askopenfilename(initialdir='', title='한 개의 파일 선택'))
@@ -82,5 +82,5 @@ class FUNC:
         console_logger().debug(FUNC.test_result_write.__name__)
         self.file_sheet[result_cell] = result
         self.file_sheet[record_cell] = str(record) # Fail 일 경우 record 값이 list type 이므로 string type 로 변환 필요
-        self.file.save(f'result/TC_result_{test_time}.xlsx')
+        self.file.save(f'excel_read/result/TC_result_{test_time}.xlsx')
         self.file.close()

@@ -1,8 +1,18 @@
 예정
+- event.py 파일 실행 경로에 상관 없이 동작하도록 경로 부분을 절대 경로로 모두 수정
 - file_read.py : file_read, sheet_read 함수 정리할 필요가 있을지 검토
 - event.py : function_name, method, url 정보 관리 위치 검토 필요
 - postman, selenium, excel_read 통합 관리
   - readme 파일 정리 필요 (재작성 등)
+
+2025-01-28 업데이트
+file_read.py
+1. TC 파일 경로 수정
+- test_script 경로에서 실행하는 조건에 맞게 수정
+2. TC result 생성 경로 수정
+- test_script 경로에서 실행하는 조건에 맞게 수정
+3. log 경로 수정
+- test_script 경로에서 실행하는 조건에 맞게 수정
 
 version : 0.6, date : 2025-01-21
 - console log 추가 code 작성
