@@ -1,9 +1,13 @@
+webhook 연동
+
 예정
 - event.py 파일 실행 경로에 상관 없이 동작하도록 경로 부분을 절대 경로로 모두 수정
 - file_read.py : file_read, sheet_read 함수 정리할 필요가 있을지 검토
 - event.py : function_name, method, url 정보 관리 위치 검토 필요
 - postman, selenium, excel_read 통합 관리
   - readme 파일 정리 필요 (재작성 등)
+- Selenium_script.py 파일 분리
+  - 기본 Script (파라미터로 단일 Case를 처리하는 Script)와 실제 Test를 구동하는 Script 분리)
 
 2025-01-28 업데이트
 file_read.py
