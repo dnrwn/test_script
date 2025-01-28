@@ -1,3 +1,5 @@
+webhook 연동
+
 예정
 - file_read.py : file_read, sheet_read 함수 정리할 필요가 있을지 검토
 - event.py : function_name, method, url 정보 관리 위치 검토 필요
