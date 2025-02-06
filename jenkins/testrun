@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+    stages {
+        stage('Testscript_song / Clone') {
+            steps {
+                echo 'Testscript_song Clone...'
+                git url: 'https://github.com/dnrwn/testscript_song.git', branch: 'master'
+            }
+        }
+        stage('Test Script / Run'){
+            steps{
+                echo 'Test Script Run'
+                bat 'pip install -r requirements.txt'
+                bat 'python test.py'
+            }
+        }
+    }
+    post {
+        always {
+            echo 'This will always run'
+        }
+        success {
+            echo 'Test Script Run Succeeded.'
+            build job: 'Test Push'
+        }
+        failure {
+            echo 'Test Script Run Failed.'
+        }
+    }
+}
