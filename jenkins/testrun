@@ -21,7 +21,7 @@ pipeline {
         }
         success {
             echo 'Test Script Run Succeeded.'
-            build job: 'Test Push'
+            build job: 'Test Branch update'
         }
         failure {
             echo 'Test Script Run Failed.'
