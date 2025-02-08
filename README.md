@@ -1,5 +1,3 @@
-webhook 연동11
-
 예정
 - event.py 파일 실행 경로에 상관 없이 동작하도록 경로 부분을 절대 경로로 모두 수정
 - file_read.py : file_read, sheet_read 함수 정리할 필요가 있을지 검토
