@@ -17,11 +17,12 @@ pipeline {
     }
     post {
         always {
-            echo 'This will always run'
+            echo 'Integration Testing Job'
         }
         success {
             echo 'Test Script Run Succeeded.'
             build job: 'Test Branch update'
+			echo 'Test Branch Update'
         }
         failure {
             echo 'Test Script Run Failed.'
