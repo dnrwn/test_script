@@ -5,7 +5,7 @@ import file_read
 func_item = {
     "Insert" :{
         "method":"post",
-        "url":"http://localhost:70/func_2"
+        "url":"http://localhost:70/func_3"
     },
     "Select" :{
         "method":"get",
@@ -13,11 +13,11 @@ func_item = {
     },
     "Update" :{
         "method":"post",
-        "url":"http://localhost:70/func_1"
+        "url":"http://localhost:70/func_2"
     },
     "Delete" :{
         "method":"post",
-        "url":"http://localhost:70/func_3"}
+        "url":"http://localhost:70/func_4"}
 }
 
 run = file_read.FUNC()
@@ -43,12 +43,10 @@ def case_run(a=1):
                         response = requests.get(url=item['url'], json=case_item_select)
                     else:
                         raise ValueError ('method Error')
-
                     ## write 함수 호출
                     if case_result_select['Expected_result'] == response.json()['Result']:
                         run.test_result_write(case_result_select['Actual_result'], case_result_select['record'], 'PASS')
                     else:
-
                         run.test_result_write(case_result_select['Actual_result'], case_result_select['record'], response.json()['Result'],
                                               record=(response.json()['Description'], response.json()['Message']))
                 else:
