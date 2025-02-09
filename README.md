@@ -1,5 +1,5 @@
 예정
-- excel read 로는 젠킨스 파이프라인에서 트리거하기 어려움 -> pytest릉 이용한 api 테스트용 case 추가 검토
+- excel read 로는 젠킨스 파이프라인에서 트리거하기 어려움 -> pytest릉 이용한 api 테스트용 case 추가 검토, postman으로 트리거 가능할지 검토
 - event.py 파일 실행 경로에 상관 없이 동작하도록 경로 부분을 절대 경로로 모두 수정
 - file_read.py : file_read, sheet_read 함수 정리할 필요가 있을지 검토
 - event.py : function_name, method, url 정보 관리 위치 검토 필요
