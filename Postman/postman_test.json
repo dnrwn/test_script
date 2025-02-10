@@ -887,47 +887,719 @@
 				}
 			},
 			"response": []
-		}
-	],
-	"event": [
-		{
-			"listen": "prerequest",
-			"script": {
-				"type": "text/javascript",
-				"packages": {},
-				"exec": [
-					""
-				]
-			}
 		},
+        {
+            "name": "Select_4_valid",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "localhost:70/func_1?idx=2147483647",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "70",
+                    "path": [
+                        "func_1"
+                    ],
+                    "query": [
+                        {
+                            "key": "idx",
+                            "value": "2147483647"
+                        }
+                    ]
+                }
+            },
+            "response": [],
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            }
+        },
+        {
+            "name": "Select_5_valid",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "localhost:70/func_1?idx=-2147483648",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "70",
+                    "path": [
+                        "func_1"
+                    ],
+                    "query": [
+                        {
+                            "key": "idx",
+                            "value": "-2147483648"
+                        }
+                    ]
+                }
+            },
+            "response": [],
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            }
+        },
+        {
+            "name": "Select_6_invalid",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "localhost:70/func_1?idx=2147483648",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "70",
+                    "path": [
+                        "func_1"
+                    ],
+                    "query": [
+                        {
+                            "key": "idx",
+                            "value": "2147483648"
+                        }
+                    ]
+                }
+            },
+            "response": [],
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            }
+        },
+        {
+            "name": "Select_7_invalid",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "localhost:70/func_1?idx=-2147483649",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "70",
+                    "path": [
+                        "func_1"
+                    ],
+                    "query": [
+                        {
+                            "key": "idx",
+                            "value": "-2147483649"
+                        }
+                    ]
+                }
+            },
+            "response": [],
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            }
+        },
+        {
+            "name": "Insert_13_valid",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"input_1\": 1,\r\n    \"input_2\": \"aaaaa\",\r\n    \"input_3\": \"\",\r\n    \"input_4\": 0\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "localhost:70/func_2",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "70",
+                    "path": [
+                        "func_2"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Insert_14_valid",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"input_1\": 1,\r\n    \"input_2\": \"\",\r\n    \"input_3\": \"aaaaabbbbb\",\r\n    \"input_4\": 1\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "localhost:70/func_2",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "70",
+                    "path": [
+                        "func_2"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Insert_15_valid",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"input_1\": 1,\r\n    \"input_2\": \"\",\r\n    \"input_3\": \"\",\r\n    \"input_4\": 1\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "localhost:70/func_2",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "70",
+                    "path": [
+                        "func_2"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Insert_16_valid",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"input_1\": 1,\r\n    \"input_2\": \"\",\r\n    \"input_3\": \"aaaaabbbbb\",\r\n    \"input_4\": 0\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "localhost:70/func_2",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "70",
+                    "path": [
+                        "func_2"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Insert_17_valid",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"input_1\": 1,\r\n    \"input_2\": \"aaaaa\",\r\n    \"input_3\": \"aaaaabbbbb\",\r\n    \"input_4\": 1\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "localhost:70/func_2",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "70",
+                    "path": [
+                        "func_2"
+                    ]
+                }
+            },
+            "response": []
+        },
 		{
-			"listen": "test",
-			"script": {
-				"type": "text/javascript",
-				"packages": {},
-				"exec": [
-					"let response = pm.response.json(); // response 변수\r",
-					"response.case_name = pm.info.requestName; //send 시 Case Name 전달\r",
-					"\r",
-					"pm.sendRequest\r",
-					"(\r",
-					"    {\r",
-					"        url: 'http://localhost:3000/launches', // 파일이 저장될 Server IP\r",
-					"        method: 'POST',\r",
-					"        header: {\r",
-					"            'Content-Type': 'application/JSON'\r",
-					"        }, \r",
-					"        body: {\r",
-					"            mode: 'raw',\r",
-					"            raw: response\r",
-					"        }\r",
-					"    },\r",
-					"    function (err, res) {\r",
-					"        console.log(res)\r",
-					"    }\r",
-					")"
-				]
-			}
+            "name": "Insert_18_invalid",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"input_1\": 1,\r\n    \"input_2\": \"aaaaab\",\r\n    \"input_3\": \"aaaaabbbbb\",\r\n    \"input_4\": 1\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "localhost:70/func_2",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "70",
+                    "path": [
+                        "func_2"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Insert_19_invalid",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"input_1\": 1,\r\n    \"input_2\": \"aaaaa\",\r\n    \"input_3\": \"aaaaabbbbbc\",\r\n    \"input_4\": 1\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "localhost:70/func_2",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "70",
+                    "path": [
+                        "func_2"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Insert_20_invalid",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"input_1\": 1,\r\n    \"input_2\": \"aaaaa\",\r\n    \"input_3\": \"aaaaabbbbb\",\r\n    \"input_4\": 5\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "localhost:70/func_2",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "70",
+                    "path": [
+                        "func_2"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Update_15_valid",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"idx\": 15,\r\n    \"input_1\": 5,\r\n    \"input_2\": 1,\r\n    \"input_3\": \"aaaaa\",\r\n    \"input_4\": \"\",\r\n    \"input_5\": 0\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "localhost:70/func_2",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "70",
+                    "path": [
+                        "func_2"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Update_16_valid",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"idx\": 16,\r\n    \"input_1\": 5,\r\n    \"input_2\": 1,\r\n    \"input_3\": \"\",\r\n    \"input_4\": \"aaaaabbbbb\",\r\n    \"input_5\": 1\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "localhost:70/func_2",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "70",
+                    "path": [
+                        "func_2"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Update_17_valid",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"idx\": 17,\r\n    \"input_1\": 5,\r\n    \"input_2\": 1,\r\n    \"input_3\": \"\",\r\n    \"input_4\": \"\",\r\n    \"input_5\": 1\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "localhost:70/func_2",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "70",
+                    "path": [
+                        "func_2"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Update_18_valid",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"idx\": 18,\r\n    \"input_1\": 5,\r\n    \"input_2\": 1,\r\n    \"input_3\": \"aaaaa\",\r\n    \"input_4\": \"aaaaabbbbb\",\r\n    \"input_5\": 1\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "localhost:70/func_2",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "70",
+                    "path": [
+                        "func_2"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Update_19_valid",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"idx\": 19,\r\n    \"input_1\": 5,\r\n    \"input_2\": 1,\r\n    \"input_3\": \"\",\r\n    \"input_4\": \"aaaaabbbbb\",\r\n    \"input_5\": 0\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "localhost:70/func_2",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "70",
+                    "path": [
+                        "func_2"
+                    ]
+                }
+            },
+            "response": []
+        },
+				{
+					"name": "Update_20_invalid",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idx\": 20,\r\n    \"input_1\": 5,\r\n    \"input_2\": 1,\r\n    \"input_3\": \"aaaaab\",\r\n    \"input_4\": \"aaaaabbbbb\",\r\n    \"input_5\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:70/func_2",
+							"host": [
+								"localhost"
+							],
+							"port": "70",
+							"path": [
+								"func_2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_21_invalid",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idx\": 21,\r\n    \"input_1\": 5,\r\n    \"input_2\": 1,\r\n    \"input_3\": \"aaaaa\",\r\n    \"input_4\": \"aaaaabbbbbc\",\r\n    \"input_5\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:70/func_2",
+							"host": [
+								"localhost"
+							],
+							"port": "70",
+							"path": [
+								"func_2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_22_invalid",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idx\": 22,\r\n    \"input_1\": 5,\r\n    \"input_2\": 1,\r\n    \"input_3\": \"aaaaa\",\r\n    \"input_4\": \"aaaaabbbbb\",\r\n    \"input_5\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:70/func_2",
+							"host": [
+								"localhost"
+							],
+							"port": "70",
+							"path": [
+								"func_2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_4_valid",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:70/func_2?idx=2147483647",
+							"host": [
+								"localhost"
+							],
+							"port": "70",
+							"path": [
+								"func_2"
+							],
+							"query": [
+								{
+									"key": "idx",
+									"value": "2147483647"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_5_valid",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:70/func_2?idx=-2147483648",
+							"host": [
+								"localhost"
+							],
+							"port": "70",
+							"path": [
+								"func_2"
+							],
+							"query": [
+								{
+									"key": "idx",
+									"value": "-2147483648"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_6_invalid",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:70/func_2?idx=2147483648",
+							"host": [
+								"localhost"
+							],
+							"port": "70",
+							"path": [
+								"func_2"
+							],
+							"query": [
+								{
+									"key": "idx",
+									"value": "2147483648"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_7_invalid",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:70/func_2?idx=-2147483649",
+							"host": [
+								"localhost"
+							],
+							"port": "70",
+							"path": [
+								"func_2"
+							],
+							"query": [
+								{
+									"key": "idx",
+									"value": "-2147483649"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							"let response = pm.response.json(); // response 변수\r",
+							"response.case_name = pm.info.requestName; //send 시 Case Name 전달\r",
+							"\r",
+							"pm.sendRequest\r",
+							"(\r",
+							"    {\r",
+							"        url: 'http://localhost:3000/launches', // 파일이 저장될 Server IP\r",
+							"        method: 'POST',\r",
+							"        header: {\r",
+							"            'Content-Type': 'application/JSON'\r",
+							"        }, \r",
+							"        body: {\r",
+							"            mode: 'raw',\r",
+							"            raw: response\r",
+							"        }\r",
+							"    },\r",
+							"    function (err, res) {\r",
+							"        console.log(res)\r",
+							"    }\r",
+							")"
+						]
+					}
+				}
+			]
 		}
-	]
-}
