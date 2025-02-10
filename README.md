@@ -13,7 +13,7 @@ TC 기준 문서 경로
 - 간략한 UI 구성
 
 ## Unittest (일부 완료)
-- 젠킨스 활용을 위해 레포지토리 분리
+- 젠킨스 운용을 위해 레포지토리 분리
 - 경로 : https://github.com/dnrwn/unittest_song
 - pytest를 이용한 단위 테스트 수행
 - pytest-cov로 coverage 측정
