@@ -8,6 +8,12 @@
 - Selenium_script.py 파일 분리
   - 기본 Script (파라미터로 단일 Case를 처리하는 Script)와 실제 Test를 구동하는 Script 분리)
 
+2025-02-10 업데이트
+- API Test용 TC 업데이트 완료
+  - pytest.ini 인식 이슈가 있어서 ini 파일을 지정해서 테스트 수행해야 함
+    - pytest -c pytest.ini test_apitest_tc.py
+  - Case 추출 기준 : excel_read 경로에 있는 TC 문서
+
 2025-01-28 업데이트
 file_read.py
 1. TC 파일 경로 수정
