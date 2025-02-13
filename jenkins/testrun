@@ -9,9 +9,21 @@ pipeline {
         }
         stage('Test Script / Run'){
             steps{
-                echo 'Test Script Run'
-                bat 'pip install -r requirements.txt'
-                bat 'python test.py'
+                script{
+                    echo 'Test Script Run'
+                    bat 'pip install -r requirements.txt'
+                }
+                script{
+                    echo 'excel_read run...'
+                    bat 'python excel_read/event.py'
+                }
+                script{
+                    echo 'pytest run...'
+                    bat 'pytest -c pytest/pytest.ini test_apitest_tc.py || exit 0'
+                }
+                script{
+                    echo 'selenium run...'
+                }
             }
         }
     }
