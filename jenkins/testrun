@@ -33,7 +33,7 @@ pipeline {
         }
         success {
             echo 'Test Script Run Succeeded.'
-            build job: 'Test Branch update' propagate: false
+            build job: 'Test Branch update', propagate: false
 			echo 'Test Branch Update'
         }
         failure {
