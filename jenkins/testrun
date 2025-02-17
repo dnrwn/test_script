@@ -23,7 +23,7 @@ pipeline {
                     steps {
                         script {
                             echo 'pytest run...'
-                            bat 'pytest -c pytest/pytest.ini test_apitest_tc.py || exit 0'
+                            bat 'pytest -c pytest/pytest.ini pytest/test_apitest_tc.py || exit 0'
                         }
                     }
                 }
