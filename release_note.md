@@ -1,5 +1,7 @@
 예정
-- excel read 로는 젠킨스 파이프라인에서 트리거하기 어려움 -> pytest릉 이용한 api 테스트용 case 추가 검토, postman으로 트리거 가능할지 검토
+- excel read 로는 젠킨스 파이프라인에서 트리거로 사용하기 어려움 
+-> pytest를 이용한 api 테스트용 case 추가 검토, postman으로 트리거 가능할지 검토
+
 - event.py 파일 실행 경로에 상관 없이 동작하도록 경로 부분을 절대 경로로 모두 수정
 - file_read.py : file_read, sheet_read 함수 정리할 필요가 있을지 검토
 - event.py : function_name, method, url 정보 관리 위치 검토 필요
@@ -7,6 +9,16 @@
   - readme 파일 정리 필요 (재작성 등)
 - Selenium_script.py 파일 분리
   - 기본 Script (파라미터로 단일 Case를 처리하는 Script)와 실제 Test를 구동하는 Script 분리)
+
+2025-02-17 업데이트
+1. Selenium Test Case 수정
+- parametrize를 사용하여 각 Case가 독립적으로 수행되도록 ㅜㅅ정
+- Selenium 하위 run.py 파일로 수행하도록 수정
+- result 경로 수정
+- edge webdriver 변경 (131 -> 133)
+
+2. jenkins 파이프라인 수정
+- excel_read, pytest, selenium이 병렬로 수행되도록 수정
 
 2025-02-10 업데이트
 - API Test용 TC 업데이트 완료

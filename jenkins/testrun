@@ -13,16 +13,34 @@ pipeline {
                     echo 'Test Script Run'
                     bat 'pip install -r requirements.txt'
                 }
-                script{
-                    echo 'excel_read run...'
-                    bat 'python excel_read/event.py'
-                }
-                script{
-                    echo 'pytest run...'
-                    bat 'pytest -c pytest/pytest.ini test_apitest_tc.py || exit 0'
-                }
-                script{
-                    echo 'selenium run...'
+                parallel {
+                    stage('excel_read run'){
+                        steps{
+                            script{
+                                echo 'excel_read run...'
+                                bat 'python excel_read/event.py'
+                            }
+                        }
+                    }
+                    stage('pytest run'){
+                        steps{
+                            script{
+                                echo 'pytest run...'
+                                bat 'pytest -c pytest/pytest.ini test_apitest_tc.py || exit 0'
+                            }
+                        }
+                    }
+                    stage('selenium run'){
+                            steps{
+                                ws('Selenium'){
+                                    script{
+                                        echo 'selenium run...'
+                                        bat 'python run.py || exit 0'
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -34,7 +52,7 @@ pipeline {
         success {
             echo 'Test Script Run Succeeded.'
             build job: 'Test Branch update', propagate: false
-			echo 'Test Branch Update'
+            echo 'Test Branch Update'
         }
         failure {
             echo 'Test Script Run Failed.'
