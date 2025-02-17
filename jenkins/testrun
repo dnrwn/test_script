@@ -32,7 +32,7 @@ pipeline {
                         dir('Selenium') {
                             script {
                                 echo 'selenium run...'
-                                bat 'python run.py || exit 0'
+                                bat 'pytest -c pytest.ini item/pytest/Selenium_script.py || exit 0'
                             }
                         }
                     }
