@@ -31,12 +31,11 @@ pipeline {
                         }
                     }
                     stage('selenium run'){
-                            steps{
-                                ws('Selenium'){
-                                    script{
-                                        echo 'selenium run...'
-                                        bat 'python run.py || exit 0'
-                                    }
+                        steps{
+                            ws('Selenium'){
+                                script{
+                                    echo 'selenium run...'
+                                    bat 'python run.py || exit 0'
                                 }
                             }
                         }
