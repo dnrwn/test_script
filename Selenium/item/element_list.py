@@ -1,6 +1,6 @@
 ########## General ##########
 url = 'http://localhost:70/ui'  # url
-driver_path = 'util/edgedriver_win64/msedgedriver.exe' # selenium script 실행 위치 기준
+driver_path = './util/edgedriver_win64/msedgedriver.exe' # selenium script 실행 위치 기준
 
 
 ########## UI ##########
