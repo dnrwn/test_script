@@ -5,38 +5,34 @@ pipeline {
             steps {
                 echo 'Testscript_song Clone...'
                 git url: 'https://github.com/dnrwn/testscript_song.git', branch: 'master'
+                echo 'Test Script Preparation'
+                bat 'pip install -r requirements.txt'
             }
         }
-        stage('Test Script / Run'){
-            steps{
-                script{
-                    echo 'Test Script Run'
-                    bat 'pip install -r requirements.txt'
+        stage('Test Script / Run') {
+            parallel {
+                stage('excel_read run') {
+                    steps {
+                        script {
+                            echo 'excel_read run...'
+                            bat 'python excel_read/event.py'
+                        }
+                    }
                 }
-                parallel {
-                    stage('excel_read run'){
-                        steps{
-                            script{
-                                echo 'excel_read run...'
-                                bat 'python excel_read/event.py'
-                            }
+                stage('pytest run') {
+                    steps {
+                        script {
+                            echo 'pytest run...'
+                            bat 'pytest -c pytest/pytest.ini test_apitest_tc.py || exit 0'
                         }
                     }
-                    stage('pytest run'){
-                        steps{
-                            script{
-                                echo 'pytest run...'
-                                bat 'pytest -c pytest/pytest.ini test_apitest_tc.py || exit 0'
-                            }
-                        }
-                    }
-                    stage('selenium run'){
-                        steps{
-                            ws('Selenium'){
-                                script{
-                                    echo 'selenium run...'
-                                    bat 'python run.py || exit 0'
-                                }
+                }
+                stage('selenium run') {
+                    steps {
+                        ws('Selenium') {
+                            script {
+                                echo 'selenium run...'
+                                bat 'python run.py || exit 0'
                             }
                         }
                     }
