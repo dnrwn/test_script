@@ -24,6 +24,7 @@ def capture_out(type_1='', item_1='', item_2='', item_3='', item_4='', item_5=''
 
 
 # driver service
+print(element_list.driver_path)
 service = webdriver.EdgeService(executable_path=element_list.driver_path)
 
 def gui_op(a):
