@@ -1,4 +1,11 @@
 예정
+- 이슈 : 젠킨스 파이프라인에서 selenium 실행하면 아래 error가 발행해서 진행 안됨
+  - local에서 직접 하면 잘 됨
+- selenium.common.exceptions.SessionNotCreatedException: Message: session not created: Microsoft Edge failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist) 
+- driver 경로 문제인가 싶어서 여러번 테스트 했으나, 다른 문제인 것 같음
+- google에서 사례가 종종 보였지만 해결되지 않음
+
 - excel read 로는 젠킨스 파이프라인에서 트리거로 사용하기 어려움 
 -> pytest를 이용한 api 테스트용 case 추가 검토, postman으로 트리거 가능할지 검토
 

@@ -36,8 +36,7 @@ def gui_op(a):
 
     return option
 
-# driver = webdriver.Edge(service=service, options=gui_op('show'))
-driver = webdriver.Edge(service=service)
+driver = webdriver.Edge(service=service, options=gui_op('show'))
 
 # input 정의
 def ui_click(a):
